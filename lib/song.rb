@@ -37,9 +37,6 @@ def self.create
     self.find_by_name(name) || self.create_by_name(name)
   end 
   
-  
-  
-  
   def self.alphabetical
     @@all.sort_by {|a| a.name}
   
@@ -60,11 +57,8 @@ def self.create
     song.artist_name = (name.split(" - ")[0])
     @@all << song 
     song 
-    
   end
   
-  
-
 def Song.destroy_all
   @@all = []
 end 
